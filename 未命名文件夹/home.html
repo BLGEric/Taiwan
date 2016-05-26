@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>旅在台灣</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<style>
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+
+    footer {
+      background-color: #f2f2f2;
+      padding: 25px;
+    }
+    
+  .carousel-inner img {
+      width: 100%; /* Set width to 100% */
+      margin: auto;
+      min-height:200px;
+  }
+
+  @media (max-width: 600px) {
+    .carousel-caption {
+      display: none; 
+    }
+  }
+  .map{
+    text-align: center;
+  }
+
+</style>
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top navbar-inverse">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">網站圖標</a>
+          </div>
+
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav" >
+              <li ><a href="home.html">home<span class="sr-only">(current)</span></a></li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">探索台灣<span class="caret"></span></a>
+                <ul class="dropdown-menu" role="menu">
+                  <li><a href="#jiuzhaigou">北部</a></li>
+                  <li><a href="#lijiang">中部</a></li>
+                  <li><a href="#shuiliandong">南部</a></li>
+                  <li><a href="#shuiliandong">東部</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#">更多..</a></li>
+                </ul>
+              </li>
+              <li data-toggle="modal" data-target="#about"><a href="#" >資訊快報</a></li>
+              <li data-toggle="modal" data-target="#about"><a href="#" >台灣概況</a></li>
+              <li data-toggle="modal" data-target="#about"><a href="#" >歷史沿革</a></li>
+              <li data-toggle="modal" data-target="#about"><a href="#" >民俗風情</a></li>
+            </ul>
+
+            <form class="navbar-form navbar-right" role="search">
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="搜索景点..">
+                <button type="button" class="btn btn-default">Go</button>
+              </div>
+            </form>
+
+
+            <ul class="nav navbar-nav navbar-right">
+              <li data-toggle="modal" data-target="#signin-signup-tab" id="signin-button"><a href="#" >登陆</a></li>
+              <li data-toggle="modal" data-target="#signin-signup-tab" id="signup-button"><a href="#" >注册</a></li>
+            </ul>
+          </div>
+        </div>
+</nav>
+<br><br>
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+    </ol>
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <img src="http://placehold.it/1200x400?text=IMAGE" alt="Image">
+        <div class="carousel-caption">
+          <h3>Sell $</h3>
+          <p>Money Money.</p>
+        </div>      
+      </div>
+      <div class="map">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3744361.137604321!2d118.76703450859782!3d23.582709486242287!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346ed5cb2b61c3a5%3A0xcf20ddb042be7fa0!2z5Y-w5rm-!5e0!3m2!1szh-CN!2stw!4v1464277278701" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+      </div>
+<br><br><br>
+<footer class="contaniner-fluid text-center">	
+			<p>copyright-
+			2016-
+			台灣科技大學網頁製作-
+			Telephone:＋886 0901234567</p>
+</footer>
+
+</body>
+</html>
