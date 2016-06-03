@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>旅在台灣-風俗民情</title>
+	<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script>
+      function faccount(x) {
+        if(x.value!=""){
+          x.value ="";
+        }
+      }
+      function faccount1(x) {
+        if(x.value==""){
+          x.value ="Account";
+        }
+      }
+      function fpassword(x) {
+        if(x.value!=""){
+          x.value ="";
+          x.type ="password";
+        }
+      }
+      function fpassword1(x) {
+        if(x.value==""){
+          x.value ="Password";
+          x.type ="text";
+        }
+      }
+    </script>
+<style>
+    .jumbotron{
+    	background: rgba(204, 204, 255, 0.5); 
+    }
+	.s{
+    	opacity: 0.7;
+    }
+    /* Remove the navbar's default margin-bottom and rounded borders */ 
+    .t{
+    	font-size: 2vw !important;
+    	color: Blue;
+    }
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+    .row.content {height: 600px;}
+    
+    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+    
+    /* Set gray background color and 100% height */
+    .sidenav {
+      padding-top: 20px;
+      background-color: white;
+      height: 100%;
+    }
+    
+    /* Set black background color, white text and some padding */
+    footer {
+      background-color: #99ccff;
+      color: white;
+      padding: 20px;
+    }
+    
+    /* On small screens, set height to 'auto' for sidenav and grid */
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+      .row.content {height:auto;} 
+    }
+    img {
+    border-radius: 50%;
+｝
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top navbar-inverse">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="home.html"><img src="img/6.jpg" width="150" height="150"></a>
+          </div>
+
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav" >
+              <li ><a href="home.html">home<span class="sr-only">(current)</span></a></li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">探索台灣<span class="caret"></span></a>
+                <ul class="dropdown-menu" role="menu">
+                  <li><a href="#jiuzhaigou">北部</a></li>
+                  <li><a href="#lijiang">中部</a></li>
+                  <li><a href="#shuiliandong">南部</a></li>
+                  <li><a href="#shuiliandong">東部</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#">更多..</a></li>
+                </ul>
+              </li>
+              <li data-toggle="modal" data-target="#about"><a href="#" >資訊快報</a></li>
+              <li data-toggle="modal" data-target="#about"><a href="#" >台灣概況</a></li>
+              <li data-toggle="modal" data-target="#about"><a href="#" >歷史沿革</a></li>
+              <li data-toggle="modal" data-target="#about"><a href="#" >民俗風情</a></li>
+            </ul>
+
+            <form class="navbar-form navbar-right" role="search">
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="搜索景点..">
+                <button type="button" class="btn btn-default">Go</button>
+              </div>
+            </form>
+
+
+            <ul class="nav navbar-nav navbar-right">
+              <li data-toggle="modal" data-target="#signin-signup-tab" id="signin-button"><a href="#" >登陆</a></li>
+              <li data-toggle="modal" data-target="#signin-signup-tab" id="signup-button"><a href="#" >注册</a></li>
+            </ul>
+          </div>
+        </div>
+</nav>
+<br><br>
+  
+<div class="container-fluid text-center">    
+	<div class="row content">
+    	<div class="col-sm-10 text-left ">
+    		<div class="jumbotron s"> 
+      			<marquee SCROLLDELAY="10" DIRECTION="left"><b><p style="color: #99ff66; font-size: 4vw; font-weight: 900;">登入頁面</p></b></marquee>
+            <form>
+      			  <input type="text" name="tbaccount" value="Account" onfocus="faccount(this)" onblur="faccount1(this)"><br>
+              <input type="text" name="tbpassword" value="Password" onfocus="fpassword(this)" onblur="fpassword1(this)"><br>
+              <input type="submit" value="Submit">
+              <input type="reset" value="Reset">
+            </form>
+ 			  </div>
+    	</div>
+    	<div class="col-sm-2 sidenav">
+      		<div class="well">
+        		<p>ADS</p>
+      		</div>
+      		<div class="well">
+        		<p>ADS</p>
+      		</div>
+    	</div>
+  	</div>
+</div>
+
+<footer class="container-fluid text-center">
+  <li>台灣省台北市大安區基隆路四段43號</li>
+      <li>國立台灣科技大學</li>
+      <li>Tel:+886 090－123－4567</li>
+      <li>2016網頁製作</li>
+</footer>
+
+</body>
+</html>
