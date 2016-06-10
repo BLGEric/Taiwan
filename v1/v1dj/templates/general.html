@@ -5,6 +5,8 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
   	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    {% load staticfiles %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css" media="all" />
   	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
   	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
      <link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
@@ -21,7 +23,7 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="home.html"><img style="border-radius: 50%" src="images/6.jpg" width="55" height="35"></a>
+            <a class="navbar-brand" href="home.html">{% load staticfiles %}<img style="border-radius: 50%" src="{% static 'images/6.jpg' %}" width="55" height="35"></a>
           </div>
 
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -69,8 +71,8 @@
     	<div class="col-sm-8"> 
       		<h1 style="text-align: center;">台灣概況</h1>
       		<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;臺灣是個呈南北狹長型的海島，面積約有3.6萬平方公里（14,400平方英哩），位於亞洲大陸東南方、太平洋西岸東亞島弧間，北臨日本、琉球群島，南接菲律賓群島，是往來亞洲各地的樞紐；航空網路四通八達，為非常便利的旅遊地之一。</p>
-    
-      		<img class="img-responsive" src="images/map.png">
+          {% load staticfiles %}
+      		<img class="img-responsive" src="{% static 'images/map.png' %">
       		<br>
       		<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;臺灣不大，但蘊藏的自然資源和人文風貌卻十足可觀。 在自然資源方面，由於地層板塊運動不斷的進行，造成臺灣複雜多變的地形地貌，高山、丘陵、平原、盆地、島嶼、縱谷與海岸等景觀豐富；再加上北迴歸線恰好從中通過，使臺灣同時擁有熱帶、亞熱帶、溫帶等各種自然生態，其中原生特有種的比例相當高，如櫻花鉤吻鮭、臺灣獼猴、臺灣黑熊、藍腹鷴等，已使臺灣成為世界保育的重地之一。</p>
 
@@ -81,13 +83,13 @@
 
       		<br>
       		<div class=row>
-      			<div class="col-sm-6">
-      				<img class="img-responsive" src="images/101.jpg">
+      			<div class="col-sm-6">{% load staticfiles %}
+      				<img class="img-responsive" src="{% static 'images/101.jpg' %">
       				<p style="text-align:center;">台北101</p>
       			</div>
       			
-      			<div class="col-sm-6">
-      				<img class="img-responsive" src="images/turtleisland.jpg" width="100%">
+      			<div class="col-sm-6">{% load staticfiles %}
+      				<img class="img-responsive" src="{% static 'images/turtleisland.jpg' %" width="100%">
       				<p style="text-align:center;">龜山島</p>
       			</div>
       		</div>
@@ -115,16 +117,16 @@
       		</div>
       		<br>
       		<br>
-      		<div class="well">
-        		<img class="img-responsive" src="images/alishan.png">
+      		<div class="well">{% load staticfiles %}
+        		<img class="img-responsive" src="{% static 'images/alishan.png' %">
       		</div>
 
-      		<div class="well">
-        		<img class="img-responsive" src="images/sunmoonlake.png">
+      		<div class="well">{% load staticfiles %}
+        		<img class="img-responsive" src="{% static 'images/sunmoonlake.png' %">
       		</div>
 
-      		<div class="well">
-        		<img class="img-responsive" src="images/yeliu.png">
+      		<div class="well">{% load staticfiles %}
+        		<img class="img-responsive" src="{% static 'images/yeliu.png' %">
       		</div>
 
     	</div>
@@ -135,8 +137,8 @@
     <div class="container">
       <div class="footer-top">
           <div class="footer-grids">
-            <div class="col-md-3 footer-logo">
-              <img src="images/6.jpg" width="170" height="150">
+            <div class="col-md-3 footer-logo">{% load staticfiles %}
+              <img src="{% static 'images/6.jpg' %}" width="170" height="150">
             </div>
             <div class="col-md-3 f-address">
               <ul>

@@ -5,6 +5,8 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
   	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    {% load staticfiles %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css" media="all" />
   	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
   	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
      <link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
@@ -24,7 +26,7 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="home.html"><img style="border-radius: 50%" src="images/6.jpg" width="55" height="35"></a>
+            <a class="navbar-brand" href="home.html">{% load staticfiles %}<img style="border-radius: 50%" src="{% static 'images/6.jpg' %" width="55" height="35"></a>
           </div>
 
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -74,36 +76,36 @@
 
   <div class="row">
     <div class="col-sm-4 destination-grid">
-      <h2>淡水老街</h2>
-      <img class="responsive-img"  src="images/淡水老街.png" width="80%" height="60%">
+      <h2>淡水老街</h2>{% load staticfiles %}
+      <img class="responsive-img"  src="{% static 'images/淡水老街.png' %" width="80%" height="60%">
     </div>
 
     <div class="col-sm-4 destination-grid">
-      <h2>九份</h2>
-      <img class="responsive-img" src="images/九份.png" width="80%" height="60%">
+      <h2>九份</h2>{% load staticfiles %}
+      <img class="responsive-img" src="{% static 'images/九份.png' %" width="80%" height="60%">
     </div>
 
     <div class="col-sm-4 destination-grid">
-    <h2>总统府</h2>
-    <img class="responsive-img"  src="images/总统府.png" width="80%" height="60%">
+    <h2>总统府</h2>{% load staticfiles %}
+    <img class="responsive-img"  src="{% static 'images/总统府.png' %" width="80%" height="60%">
     </div>
   </div>
 
 
   <div class="row">
     <div class="col-sm-4 destination-grid">
-      <h2>陽明山國家公園</h2>
-      <img class="responsive-img"  src="images/阳明山.png" width="80%" height="60%">
+      <h2>陽明山國家公園</h2>{% load staticfiles %}
+      <img class="responsive-img"  src="{% static 'images/阳明山.png' %" width="80%" height="60%">
     </div>
 
     <div class="col-sm-4 destination-grid">
-      <h2>野柳</h2>
-      <img class="responsive-img"  src="images/野柳.png" width="80%" height="60%">
+      <h2>野柳</h2>{% load staticfiles %}
+      <img class="responsive-img"  src="{% static 'images/野柳.png' %" width="80%" height="60%">
     </div>
 
     <div class="col-sm-4 destination-grid">
-    <h2>台北101</h2>
-    <img class="responsive-img"  src="images/台北101.png" width="80%" height="60%">
+    <h2>台北101</h2>{% load staticfiles %}
+    <img class="responsive-img"  src="{% static 'images/台北101.png' %" width="80%" height="60%">
     </div>
   </div>
 
@@ -113,8 +115,8 @@
     <div class="container">
       <div class="footer-top">
           <div class="footer-grids">
-            <div class="col-md-3 footer-logo">
-              <img src="images/6.jpg" width="170" height="150">
+            <div class="col-md-3 footer-logo">{% load staticfiles %}
+              <img src="{% static 'images/6.jpg' %" width="170" height="150">
             </div>
             <div class="col-md-3 f-address">
               <ul>
