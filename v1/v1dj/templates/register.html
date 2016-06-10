@@ -5,10 +5,21 @@
 	<meta charset="utf-8">
   	<meta name="viewport" content="width=device-width, initial-scale=1">
   	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+    {% load staticfiles %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css" media="all" /> <!--css href要改成像上面那樣 其他有用自己建的也是-->
   	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
   	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <script>
+      function fusername(x) {
+        if(x.value!=""){
+          x.value ="";
+        }
+      }
+      function fusername1(x) {
+        if(x.value==""){
+          x.value ="Username";
+        }
+      }
       function faccount(x) {
         if(x.value!=""){
           x.value ="";
@@ -51,7 +62,6 @@
 	.s{
     	opacity: 0.7;
     }
-    /* Remove the navbar's default margin-bottom and rounded borders */ 
     .t{
     	font-size: 2vw !important;
     	color: Blue;
@@ -69,7 +79,8 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="home.html"><img style="border-radius: 50%" src="images/6.jpg" width="55" height="35"></a>
+            <!--圖片 要改成像下面那樣{% load staticfiles %} src也要改格式 其他的圖片也是-->
+            <a class="navbar-brand" href="home.html">{% load staticfiles %}<img style="border-radius: 50%" src="{% static 'images/6.jpg' %}" width="55" height="35"></a>
           </div>
 
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -84,6 +95,7 @@
                   <li><a href="east.html">東部</a></li>
                   <li class="divider"></li>
                   <li><a href="#">更多..</a></li>
+                  <!-- href要改成像home.html的連結格式一樣 其他的也是 要注意urls.py和views.py有新增上去-->
                 </ul>
               </li>
               <li data-toggle="modal" data-target="#about"><a href="" >資訊快報</a></li>
@@ -108,16 +120,18 @@
         </div>
 </nav>
 <br><br><br><br>
-  
+
 <div class="container-fluid text-center">    
 	<div class="row content">
     	<div class="col-sm-12 text-left ">
     		<div class="jumbotron"> 
-      		  <h2>註冊</h2>
-      			  <input type="text" name="tbaccount" value="Account" onfocus="faccount(this)" onblur="faccount1(this)" style="color：grey;"><br>
-              <input type="text" name="tbpassword" value="Password" onfocus="fpassword(this)" onblur="fpassword1(this)" style="color: grey;"><br>
-              <input type="text" name="tbconfirm" value="Confirm Again" onfocus="fconfirm(this)" onblur="fconfirm1(this)" style="color: grey;"><br>
-              <input type="submit" value="Submit">
+      		  <form method="post"> {% csrf_token %}
+              <h2>註冊</h2>
+              <input type="text" name="tbusername" value="Username" onfocus="fusername(this)" onblur="fusername1(this)" style="color:grey;"><br><br>
+      			  <input type="text" name="tbaccount" value="Account" onfocus="faccount(this)" onblur="faccount1(this)" style="color:grey;"><br><br>
+              <input type="text" name="tbpassword" value="Password" onfocus="fpassword(this)" onblur="fpassword1(this)" style="color: grey;"><br><br>
+              <input type="text" name="tbconfirm" value="Confirm Again" onfocus="fconfirm(this)" onblur="fconfirm1(this)" style="color: grey;"><br><br>
+              <input type="submit" value="Submit">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
               <input type="reset" value="Reset">
             </form>
  			  </div>
@@ -130,7 +144,9 @@
       <div class="footer-top">
           <div class="footer-grids">
             <div class="col-md-3 footer-logo">
-              <img src="images/6.jpg" width="170" height="150">
+            <!--圖片 要改成像下面那樣{% load staticfiles %} src也要改格式 其他的圖片也是-->
+            {% load staticfiles %}
+              <img src="{% static 'images/6.jpg' %}" width="170" height="150">
             </div>
             <div class="col-md-3 f-address">
               <ul>
