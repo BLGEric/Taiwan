@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>旅在台灣－台灣概況</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    {% load staticfiles %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css" media="all" />
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+     <link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+</head>
+<body>
+
+
+<nav class="navbar navbar-default navbar-fixed-top navbar-inverse">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/home/">{% load staticfiles %}<img style="border-radius: 50%" src="{% static 'images/6.jpg' %}" width="55" height="35"></a>
+          </div>
+
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav" >
+              <li ><a href="/home/">home<span class="sr-only">(current)</span></a></li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">探索台灣<span class="caret"></span></a>
+                <ul class="dropdown-menu" role="menu">
+                  <li><a href="/north/">北部</a></li>
+                  <li><a href="/center/">中部</a></li>
+                  <li><a href="/south/">南部</a></li>
+                  <li><a href="/east/">東部</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#">更多..</a></li>
+                </ul>
+              </li>
+              <li data-toggle="modal" data-target="#about"><a href="" >資訊快報</a></li>
+              <li data-toggle="modal" data-target="#about"><a href="/general/" >台灣概況</a></li>
+              <li data-toggle="modal" data-target="#about"><a href="/history/" >歷史沿革</a></li>
+              <li data-toggle="modal" data-target="#about"><a href="/culture/" >民俗風情</a></li>
+            </ul>
+
+            <form class="navbar-form navbar-right" role="search">
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="搜索景点..">
+                <button type="button" class="btn btn-default">Go</button>
+              </div>
+            </form>
+
+
+            <ul class="nav navbar-nav navbar-right">
+              <li data-toggle="modal" data-target="#signin-signup-tab" id="signin-button"><a href="/login/" >登陆</a></li>
+              <li data-toggle="modal" data-target="#signin-signup-tab" id="signup-button"><a href="/register/" >注册</a></li>
+            </ul>
+          </div>
+        </div>
+</nav>
+     
+
+<div class="container-fluid">
+	<br>
+	<br>
+	<div class="row">
+	
+    	<div class="col-sm-8"> 
+      		<h1 style="text-align: center;">台灣概況</h1>
+      		<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;臺灣是個呈南北狹長型的海島，面積約有3.6萬平方公里（14,400平方英哩），位於亞洲大陸東南方、太平洋西岸東亞島弧間，北臨日本、琉球群島，南接菲律賓群島，是往來亞洲各地的樞紐；航空網路四通八達，為非常便利的旅遊地之一。</p>
+          {% load staticfiles %}
+      		<img class="img-responsive" src="{% static 'images/map.png' %}">
+      		<br>
+      		<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;臺灣不大，但蘊藏的自然資源和人文風貌卻十足可觀。 在自然資源方面，由於地層板塊運動不斷的進行，造成臺灣複雜多變的地形地貌，高山、丘陵、平原、盆地、島嶼、縱谷與海岸等景觀豐富；再加上北迴歸線恰好從中通過，使臺灣同時擁有熱帶、亞熱帶、溫帶等各種自然生態，其中原生特有種的比例相當高，如櫻花鉤吻鮭、臺灣獼猴、臺灣黑熊、藍腹鷴等，已使臺灣成為世界保育的重地之一。</p>
+
+      		<br>
+
+
+      		<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;為維護優美的自然景觀與保護生態，境內設置9個國家公園和13個國家風景區，將全臺最精華的自然美景和觀光資源集合在內。不僅可探訪太魯閣氣勢磅礡的險峻高山峽谷；乘坐登山鐵道小火車，穿梭林間觀看阿里山的日出、雲海；抑或攀登東北亞第一高峰—玉山，見證雄偉山岳和四季景致之變幻；來到南臺灣的墾丁，濃厚的海洋渡假氣息讓人感到輕鬆自在，享有「亞洲夏威夷」的美譽；日月潭則是一顆耀眼的山中明珠，湖山共融的景色教人嘆絕！而花東海岸和縱谷，保留了東臺灣最純淨的自然氣息；離島的金門與澎湖，則以豐富的地方特色、人文史蹟拼湊出與眾不同的風情……這些都是寶島美麗的召喚與邀約！</p>
+
+      		<br>
+      		<div class=row>
+      			<div class="col-sm-6">{% load staticfiles %}
+      				<img class="img-responsive" src="{% static 'images/101.jpg' %}">
+      				<p style="text-align:center;">台北101</p>
+      			</div>
+      			
+      			<div class="col-sm-6">{% load staticfiles %}
+      				<img class="img-responsive" src="{% static 'images/turtleisland.jpg' %}" width="100%">
+      				<p style="text-align:center;">龜山島</p>
+      			</div>
+      		</div>
+
+      		<br>
+
+      		<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;在人文風貌方面，由於兼融閩南、客家、外省及原住民等不同的族群，形成多姿多彩的人文色彩，無論在宗教信仰、建築、語言、生活習慣及飲食風味上，均處處展現和諧共榮的繽紛景象；其中「美食」為最鮮明的一項代表，舉凡臺菜、客家菜、湘菜、川菜、日式、韓式料理，或是傳統小吃、地方特產美食，呈現出多元豐富的美食饗宴，使臺灣「美食王國」之名備受世界肯定。</p>
+      </div>
+   
+
+   	  <div class="col-sm-4 sidenav">
+       		<br>
+       		<br>
+       		<br>
+
+     		<div class="well">
+        			<h2>小資料</h2>
+       				<p>面積 : 36,000 平方公里</p>
+					<p>人口 : 約2,300萬人</p>
+					<p>人民 : 漢人、原住民</p>
+					<p>語言 : 華語/臺語(閩南語)/客家話/原住民各族族語</p>
+					<p>宗教 : 佛教/道教/基督教/天主教/回教</p>
+					<p>領導人 : 蔡英文</p>
+					<p>執政黨：民進黨</p>
+      		</div>
+      		<br>
+      		<br>
+      		<div class="well">{% load staticfiles %}
+        		<img class="img-responsive" src="{% static 'images/alishan.png' %}">
+      		</div>
+
+      		<div class="well">{% load staticfiles %}
+        		<img class="img-responsive" src="{% static 'images/sunmoonlake.png' %}">
+      		</div>
+
+      		<div class="well">{% load staticfiles %}
+        		<img class="img-responsive" src="{% static 'images/yeliu.png' %}">
+      		</div>
+
+    	</div>
+	</div>
+</div>
+
+<div class="footer">
+    <div class="container">
+      <div class="footer-top">
+          <div class="footer-grids">
+            <div class="col-md-3 footer-logo">{% load staticfiles %}
+              <img src="{% static 'images/6.jpg' %}" width="170" height="150">
+            </div>
+            <div class="col-md-3 f-address">
+              <ul>
+                <li>台灣省台北市大安區基隆路四段43號</li>
+                <li>國立台灣科技大學</li>
+                <li>Tel:+886 090-123-4567</li>
+                <li>2016網頁製作</li>
+            </ul></div>
+            <div class="col-md-6 f-address f-contact">
+              <form>
+                <input type="text" placeholder="搜索景點" required="">
+                <input type="submit" value="GO">
+              </form>
+            </div>
+            <div class="clearfix"> </div>
+          </div>
+            <div class="clearfix"> </div>
+          </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

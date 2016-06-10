@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>旅在台灣</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  {% load staticfiles %}
+  <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css" media="all" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css" media="all" />
+  <style>
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+    footer {
+      background-color: #f2f2f2;
+      padding: 25px;
+    }
+    
+  .carousel-inner img {
+      width: 100%;
+      margin: auto;
+      min-height:200px;
+  }
+  @media (max-width: 600px) {
+    .carousel-caption {
+      display: none; 
+    }
+  }
+    
+
+    footer{
+      background-color: #99ccff;
+      color: white;
+      padding: 20px;
+}
+    
+  .carousel-inner img {
+      width: 100%; 
+      margin: auto;
+      min-height:200px;
+  }
+
+  @media (max-width: 600px) {
+    .carousel-caption {
+      display: none; 
+    }
+  }
+  .map{
+    text-align: center;
+  }
+  .destination-grids {
+    margin: 5em 0 0 0;
+  }
+  .col-md-3 {
+    width: 25%;
+  }
+</style>
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top navbar-inverse">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/home/">{% load staticfiles %}<img style="border-radius: 50%" src="{% static 'images/6.jpg' %}" width="55" height="35"></a>
+          </div>
+
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav" >
+              <li ><a href="/home/">home<span class="sr-only">(current)</span></a></li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">探索台灣<span class="caret"></span></a>
+                <ul class="dropdown-menu" role="menu">
+                  <li><a href="/north/">北部</a></li>
+                  <li><a href="/center/">中部</a></li>
+                  <li><a href="/south/">南部</a></li>
+                  <li><a href="/east/">東部</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#">更多..</a></li>
+                </ul>
+              </li>
+              <li data-toggle="modal" data-target="#about"><a href="" >資訊快報</a></li>
+              <li data-toggle="modal" data-target="#about"><a href="/general/" >台灣概況</a></li>
+              <li data-toggle="modal" data-target="#about"><a href="/history/" >歷史沿革</a></li>
+              <li data-toggle="modal" data-target="#about"><a href="/culture/" >民俗風情</a></li>
+            </ul>
+
+            <form class="navbar-form navbar-right" role="search">
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="搜索景点..">
+                <button type="button" class="btn btn-default">Go</button>
+              </div>
+            </form>
+
+
+            <ul class="nav navbar-nav navbar-right">
+              <li data-toggle="modal" data-target="#signin-signup-tab" id="signin-button"><a href="/login/" >登陆</a></li>
+              <li data-toggle="modal" data-target="#signin-signup-tab" id="signup-button"><a href="/register/" >注册</a></li>
+              <!-- href要改成像上面那樣 其他的也是 要注意urls.py和views.py也要新增上去-->
+            </ul>
+          </div>
+        </div>
+</nav>
+
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">{% load staticfiles %}
+        <img src="{% static 'images/1.jpg' %}" alt="Image">
+        <div class="carousel-caption">
+          <h3>客家桐花祭</h3>
+          <p>在春夏交替之際，桐花滿山遍野綻放，一朵朵白皙嬌柔的油桐花繽紛盛開在樹上，為翠綠的山區添上新裝。沿著臺3線、北二高，我們看見白靄靄的山頭，會驚訝如此的美景，卻未曾駐足欣賞，透過客家桐花祭的舉辦，以雪白桐花為意象，傳遞客家人敬天地、重山林之傳統，更以桐花、山林之美為表，客家文化、歷史人文為核心，展現客家絕代風華，讓桐花的花開花落有了不同的意義。</p>
+        </div>      
+      </div>
+
+      <div class="item">{% load staticfiles %}
+        <img src="{% static 'images/主頁101.jpg' %}" alt="Image">
+        <div class="carousel-caption">
+          <h3>臺北，世界設計之都</h3>
+          <p>臺北是一座持續不斷用設計改變的城市，是不斷實驗創新的進行式，這也是臺北推動世界設計之都的主題精神「Adaptive City- Design In Motion」。設計不只是看得見的硬體改造，而是透過重新設計人與人之間連結、協作的系統，運用不同的專業來解決你我共同的問題，創造更多屬於臺北自己的故事。</p>
+        </div>      
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+</div>
+  
+ <div class="container">
+      <div>
+        <h3 align="center">台灣好去處</h3>
+      </div>
+
+        <div class="col-md-3 destination-grid">
+         <a href="nort.html">{% load staticfiles %}<img src="{% static 'images/2.jpg' %}" alt="" / width="250" height="250"></a> 
+          <p><h4>北部地區：</h4><h5>北台湾，为台湾北部简称。台语中的谚语：“顶港有名声，下港有出名”中常称的“顶港”亦意指北部或北台湾地区。以首都台北市为区域核心，并有目前台湾第一大的都市新北市，形成台湾最大的台北都会区。</h5></p>
+        </div>
+        <div class="col-md-3 destination-grid">
+          <a href="center.html">{% load staticfiles %}<img src="{% static 'images/3.jpg' %}" alt="" / width="250" height="250"></a>
+          <p><h4>中部地區：</h4><h5>其为台湾西部平原的起始地带，也是台湾中小企业与精密机械最重要的聚集地，巨大机械、台中精机、宝成集团、汉翔工业等著名的精致型国际企业皆以中台湾为营运中心所在。以台中市为区域中心，并形成台湾第三大的台中彰化都会区。</h5></p>
+        </div>
+        <div class="col-md-3 destination-grid">
+          <a href="south.html">{% load staticfiles %}<img src="{% static 'images/4.jpg' %}" alt="" / width="250" height="250"></a>
+          <p><h4>南部地区：</h4><h5>台语中的谚语：“顶港有名声，下港有出名”中常称的“下港”亦意指南部或南台湾地区。以高雄市与台南市组成双核心结构的区域核心，并形成台湾次大的高雄都会区及第五大的台南都会区，并拥有以嘉义市为核心的嘉义都会区等，共计三个都会区。</h5></p>
+        </div>
+        <div class="col-md-3 destination-grid">
+          <a href="east.html">{% load staticfiles %}<img src="{% static 'images/5.jpg' %}" alt="" / width="250" height="250"></a>
+          <p><h4>東部地區：</h4><h5>东台湾有“后山”之称。因东台湾多指台湾中央山脉以东的花莲县和台东县，故亦称“花东地区”。本地区东面朝太平洋，是全台湾海岸线最长的地区。地形多山，相较于西部地区而言经济较不发达，人口密度也较低，是台湾最晚开发的地区。原住民占人口比例较高，尤其是阿美族。</h5></p>
+        </div>
+</div>
+
+
+<div class="footer">
+    <div class="container">
+      <div class="footer-top">
+          <div class="footer-grids">
+            <div class="col-md-3 footer-logo">{% load staticfiles %}
+              <img src="{% static 'images/6.jpg' %}" width="170" height="150">
+            </div>
+            <div class="col-md-3 f-address">
+              <ul>
+                <li>台灣省台北市大安區基隆路四段43號</li>
+                <li>國立台灣科技大學</li>
+                <li>Tel:+886 090-123-4567</li>
+                <li>2016網頁製作</li>
+            </ul></div>
+            <div class="col-md-6 f-address f-contact">
+              <form>
+                <input type="text" placeholder="搜索景點" required="">
+                <input type="submit" value="GO">
+              </form>
+            </div>
+            <div class="clearfix"> </div>
+          </div>
+            <div class="clearfix"> </div>
+          </div>
+      </div>
+    </div>
+  </div>
+
+
+</body>
+</html>
