@@ -16,7 +16,7 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 from django.conf import settings
-from lapp.views import register,home,culture# 別忘了這裡也要改
+from lapp.views import register,home,culture,center,east,general,history,login,north,south# 別忘了這裡也要改
 admin.autodiscover()
 # 每個連結都要在這宣告成像register一樣的格式
 urlpatterns = [
@@ -24,5 +24,12 @@ urlpatterns = [
     url(r'^register/$', register),
     url(r'^$','lapp.views.home', name='home'),
     url(r'^culture/$', culture),
+    url(r'^center/$',center),
+    url(r'^east/$',east),
+    url(r'^general/$',general),
+    url(r'^history/$',history),
+    url(r'^login/$',login),
+    url(r'^north/$',north),
+    url(r'^south/$',south),
 ]
 

@@ -19,4 +19,24 @@ def home(request):
 	return render_to_response('home.html',RequestContext(request,locals()))
 def culture(request):
 	return render_to_response('culture.html',RequestContext(request,locals()))
+def center(request):
+	return render_to_response('center.html',RequestContext(request,locals()))
+def east(request):
+	return render_to_response('east.html',RequestContext(request,locals()))
+def general(request):
+	return render_to_response('general.html',RequestContext(request,locals()))
+def history(request):
+	return render_to_response('history.html',RequestContext(request,locals()))
+def login(request):
+	return render_to_response('login.html',RequestContext(request,locals()))
+def north(request):
+	return render_to_response('north.html',RequestContext(request,locals()))
+def register(request):
+	return render_to_response('register.html',RequestContext(request,locals()))
+def south(request):
+	return render_to_response('south.html',RequestContext(request,locals()))
+
+
+
+
 
