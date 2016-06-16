@@ -1,8 +1,5 @@
-from __future__ import unicode_literals
 from django.db import models
-from django.utils.encoding import python_2_unicode_compatible
 
-@python_2_unicode_compatible
 class Logindb(models.Model):
 	username = models.CharField(max_length=30)
 	account = models.CharField(max_length=30)
@@ -15,3 +12,5 @@ class Newinfo(models.Model):
 	title = models.CharField(max_length=30)
 	intro = models.CharField(max_length=100)
 	date = models.CharField(max_length=15)
+	def __str__(self):
+		return self.title
